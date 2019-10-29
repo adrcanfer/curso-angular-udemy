@@ -1,0 +1,27 @@
+
+<div class="container mt-5">
+    <h3>Novedades</h3>
+    <hr>
+    <div class="card-columns">
+        <app-film-card [pelicula] = "pelicula" [url]="'/home'"  *ngFor="let pelicula of novedades"></app-film-card>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h3>Películas populares</h3>
+    <hr>
+    <div class="card-columns">
+        <app-film-card [pelicula] = "pelicula" [url]="'/home'"  *ngFor="let pelicula of populares"></app-film-card>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h3>Películas para niños</h3>
+    <hr>
+    <div class="card-columns">
+        <app-film-card [pelicula] = "pelicula" [url]="'/home'" [keyword]="" *ngFor="let pelicula of infantiles"></app-film-card>
+    </div>
+</div>
+
+
+

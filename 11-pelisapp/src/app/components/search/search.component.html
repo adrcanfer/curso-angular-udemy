@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Buscar:</label>
+                <input [value] = "keyword" class="form-control" name="buscar" (keyup.enter)="buscarPelicula(buscarTexto.value)" type="text"
+                    placeholder="Buscar película" #buscarTexto>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="peliculas.length != 0" class="mt-5">
+        <h3>Resultados de la busqueda</h3>
+        <hr>
+        <div class="card-columns">
+            <app-film-card [pelicula]="pelicula" [url]="'/search'" [keyword]="keyword" *ngFor="let pelicula of peliculas"></app-film-card>
+        </div>
+    </div>
+</div>
